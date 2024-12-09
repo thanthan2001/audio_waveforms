@@ -10,7 +10,7 @@ class AudioBloc extends Bloc<AudioEvent, AudioState> {
     on<StartRecordingEvent>((event, emit) async {
       await recorderController.checkPermission();
       if (recorderController.hasPermission) {
-        recorderController.record();
+        final dataRecord = recorderController.record();
         emit(RecordingState(recorderController));
       }
     });
