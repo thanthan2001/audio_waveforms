@@ -1,6 +1,5 @@
 import 'package:audio_example_appv2/features/recording/presentation/pages/recording_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MainPage extends StatelessWidget {
-  const MainPage({Key? key}) : super(key: key);
+  const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +35,7 @@ class MainPage extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => AudioPage()),
+              MaterialPageRoute(builder: (context) => const AudioPage()),
             );
           },
           child: const Text('Go to Audio Page'),
